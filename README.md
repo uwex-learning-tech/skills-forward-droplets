@@ -1,7 +1,7 @@
-# DROPLETS
-**version 3.2.9**  
+# SKILLS FORWARD DROPLETS
+**version 1.0.0**  
 
-A HTML, CSS, and JavaScript framework for Instructional Designers at University of Wisconsin Extended Campus (UWEX).
+A HTML, CSS, and JavaScript framework for the Skills Forward project at University of Wisconsin Extended Campus (UWEX).
 
 ### How To Use
 1. To start, download the [framework](https://github.com/uwex-learning-tech/droplets-v3/archive/master.zip) (ZIP)
@@ -30,9 +30,9 @@ A HTML, CSS, and JavaScript framework for Instructional Designers at University 
 *Latest stable version is always recommended.*
 
 ### Bug Reporting and Questions
-If any bugs/glitches are found in this framework, please report them under the "**[Issues](https://github.com/uwex-learning-tech/droplets-v3/issues)**" page on GitHub. When reporting a bug, please write the report as detailed and specifically as possible. Note the steps to reproduce the bug and include screen captures if possible.
+If any bugs/glitches are found in this framework, please report them under the "**[Issues](https://github.com/uwex-learning-tech/skills-forward-droplets/issues)**" page on GitHub. When reporting a bug, please write the report as detailed and specifically as possible. Note the steps to reproduce the bug and include screen captures if possible.
 
-For questions, please also post them under the "**[Issues](https://github.com/uwex-learning-tech/droplets-v3/issues)**" page on GitHub.
+For questions, please also post them under the "**[Issues](https://github.com/uwex-learning-tech/skills-forward-droplets/issues)**" page on GitHub.
 
 ---
 &copy; 2018-2022. Ethan Lin, [Learning Technology & Media](https://media.uwex.edu), and [University of Wisconsin Extended Campus](https://ce.uwex.edu). All rights reserved.
