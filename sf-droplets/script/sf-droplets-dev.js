@@ -1,11 +1,11 @@
 /**
- * DROPLETS
- * @version: 3.2.9
+ * SKILLS FORWARD DROPLETS
+ * @version: 1.0.0
  * @author: Ethan Lin
- * @updated on: 10-24-2022
- * @url: https://github.com/oel-mediateam/droplets-v3
+ * @updated on: xx-xx-2022
+ * @url: https://github.com/oel-mediateam/skills-forward-droplets
  * @license: The MIT License (MIT)
- * @copyright: (c) 2018-2022 Learning Technology & Media, University of Wisconsin Extended Campus
+ * @copyright: (c) 2022 Learning Technology & Media, University of Wisconsin Extended Campus
  */
 
 "use strict";
@@ -850,7 +850,7 @@ function enableImgZoom( imgZooms ) {
         const magnifyDiv = document.createElement( 'div' );
         
         magnifyDiv.classList.add( 'magnify' );
-        magnifyDiv.style.backgroundImage = 'url(\"' + img.src + '\")';
+        magnifyDiv.style.backgroundImage = 'url("' + img.src + '")';
         
         // add the magnify div to the DOM
         el.appendChild( magnifyDiv );
