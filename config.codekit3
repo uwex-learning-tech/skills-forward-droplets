@@ -95,6 +95,19 @@
       "oAP" : "\/build\/sf-droplets\/fonts\/dropletsIcons.ttf",
       "oF" : 1
     },
+    "\/sf-droplets\/img\/professional-communication-banner-img.jpg" : {
+      "ft" : 16384,
+      "iS" : 93604,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/sf-droplets\/img\/professional-communication-banner-img.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/sf-droplets\/index.html" : {
       "cB" : 1,
       "ft" : 8192,

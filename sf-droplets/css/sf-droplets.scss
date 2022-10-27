@@ -37,11 +37,10 @@
  25. SLIDE SHOW ----------------------------------------------------------- D025
  26. SPEAK ---------------------------------------------------------------- D026
  27. FOR PRINTING --------------------------------------------------------- D027
- 28. FOOTER --------------------------------------------------------------- D028
- 29. FONT FACES ----------------------------------------------------------- D029
- 30. CANVAS.NET ADJUSTMENTS ----------------------------------------------- D030
- 31. NO JS FALLBACK ------------------------------------------------------- D031
- 32. PRISMJS CSS ---------------------------------------------------------- D032
+ 28. FONT FACES ----------------------------------------------------------- D028
+ 29. CANVAS.NET ADJUSTMENTS ----------------------------------------------- D029
+ 30. NO JS FALLBACK ------------------------------------------------------- D030
+ 31. PRISMJS CSS ---------------------------------------------------------- D031
 ----------------------------------------------------------------------------- */
 
 /*
@@ -145,21 +144,14 @@ D003: UWS DROPLETS PAGE
 Droplets page container. Droplets classes only work inside this container.
 ----------------------------------------------------------------------------- */
 
-#uws-droplets-page {
-    
-    // container property
-    position: relative;
+#sf-droplets-wrapper {
+
+    background-color: #f5f5f5;
     max-width: rem( 940px );
     margin: 0;
-    padding: 0;
-    font-size: rem( $font-size );
-    font-family: $font-family;
-    font-weight: 400;
-    color: #000;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 1.5;
-    
+    border-radius: rem( 20px );
+    overflow: hidden;
+
     * {
 
         box-sizing: border-box;
@@ -169,6 +161,77 @@ Droplets page container. Droplets classes only work inside this container.
         }
 
     }
+}
+
+#sf-droplets-header {
+
+    width: 100%;
+
+    .sf-banner {
+
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        height: rem( 175px );
+        padding: rem( 16px );
+
+        h2 {
+            position: relative;
+            width: 50%;
+            margin: 0;
+            color: #fff;
+            font-size: rem( 43px );
+            text-transform: uppercase;
+            z-index: 1;
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 0;
+            top: 0;
+            left: 0;
+        }
+
+        &:after {
+            position: absolute;
+            bottom: -39px;
+            left: 0;
+            display: block;
+            width: 156px;
+            height: rem( 28px );
+            content: " ";
+            background: url('data:image/png;base64,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') no-repeat 50% center, #990033;
+        }
+
+    }
+
+    &:after {
+        display: block;
+        content: " ";
+        width: 100%;
+        height: rem( 50px );
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAyBAMAAAEhtS10AAAACXBIWXMAAAsSAAALEgHS3X78AAAALVBMVEX///////////////////////////////////////////////////////////+g0jAFAAAAD3RSTlMAAwgKDQ8SFRcaHB8hJylrpiZ4AAAAsElEQVQYGdXB32nCUBjG4V+FQiX2w3v/kAUanKAzZAJHKB0lE2QWJ5CMcCItRUneGdqe76Ln0AtBEPF5cAUQKMgYEDD+swBY4JyRH9YAkx6wHSAuMA040w63Vk1kavj1rI5oFrg22+DU47bCTRVwe+FMHVErokf1RJVKIn3gqnfuy1NNZqGxJPUqDXNSb9KRTCt9knrYSwdSrfRFYiudSFTSMOfPShpLEi9STWbZcGPfSSs/Oh+/DrkAAAAASUVORK5CYII=') repeat-x 0% center, #990033;
+    }
+
+}
+
+#uws-droplets-page {
+    
+    position: relative;
+    width: 100%;
+    padding: rem( 16px );
+    font-size: rem( $font-size );
+    font-family: $font-family;
+    font-weight: 400;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
     
     /*
     D004: SECTION HEADER
@@ -218,8 +281,7 @@ Droplets page container. Droplets classes only work inside this container.
     h1, h2, h3, h4, h5, h6 {
         
         font-weight: 700;
-        // line-height: 1.3;
-        // margin: rem( $margin-spacing * 2 ) 0;
+        margin-top: 0;
 
         .label {
             font-size: 50%;
@@ -253,7 +315,7 @@ Droplets page container. Droplets classes only work inside this container.
 
     // D005.2: Paragraph
     p {
-        margin: rem( $margin-spacing ) 0;
+        margin: 0 0 rem( $margin-spacing ) 0;
     }
 
     .lead {
@@ -3748,27 +3810,7 @@ Droplets page container. Droplets classes only work inside this container.
 } // end page container
 
 /*
-D028: Footer
---------------------------------------------------------------------------------
-A line and some spaces beneath.
------------------------------------------------------------------------------ */
-
-#uws-droplets-page {
-
-    &:after {
-        display: block;
-        border-top: rem( 1px ) solid $border-color;
-        margin: rem( $gutter ) 0 0 0;
-        padding: rem( $gutter) 0;
-        color: $gray-color;
-        font-size: rem( 12px );
-        content: " ";
-    }
-
-}
-
-/*
-D029: FONT FACES
+D028: FONT FACES
 --------------------------------------------------------------------------------
 Setting up font face. To support font icons used inside the page container.
 ----------------------------------------------------------------------------- */
@@ -3795,7 +3837,7 @@ Setting up font face. To support font icons used inside the page container.
 }
 
 /*
-D030: CANVAS.NET ADJUSTMENTS
+D029: CANVAS.NET ADJUSTMENTS
 --------------------------------------------------------------------------------
 Additional adjustments only when loaded on Canvas.net
 ----------------------------------------------------------------------------- */
@@ -3841,7 +3883,7 @@ Additional adjustments only when loaded on Canvas.net
 }
 
 /*
-D031: NO JAVASCRIPT FALLBACK
+D030: NO JAVASCRIPT FALLBACK
 ----------------------------------------------------------------------------- */
 
 #uws-droplets-page.no-js {
@@ -4111,7 +4153,7 @@ D031: NO JAVASCRIPT FALLBACK
 }
 
 /*
-D032: PRISMJS CSS
+D031: PRISMJS CSS
 --------------------------------------------------------------------------------
 PrismJS 1.25.0
 https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+java+python+r&plugins=line-numbers+normalize-whitespace
@@ -4121,226 +4163,5 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 
     code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
     pre[class*=language-].line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:0;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.line-numbers-rows>span{display:block;counter-increment:linenumber}.line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}
-
-}
-
-/*
-D033: LEGACY/DEPRECATED COMPONENTS
---------------------------------------------------------------------------------
-Components that are no longer to be used or should not continue to be used.
-To be removed in future versions.
------------------------------------------------------------------------------ */
-
-#uws-droplets-page {
-    
-    /* D033.1: OLD ACCORDION */
-    
-    .droplets-accordion {
-    
-    	margin: rem( $gutter ) 0;
-    
-    	.accordion-controls {
-            
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-end;
-            font-size: rem( 12px );
-            line-height: rem( 16px );
-            text-align: center;
-            padding-right: rem( 8px );
-    
-            a, a:visited {
-                display: block;
-                text-decoration: none;
-                color: #000;
-                background-color: $light-gray-color;
-                padding: rem( 2px ) rem( 5px );
-                margin: 0 rem( 8px ) rem( -5px ) 0;
-                border-top-left-radius: rem( 3px );
-                border-top-right-radius: rem( 3px );
-            }
-    
-        }
-    
-        .accordion-title {
-            
-            position: relative;
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-            flex: 1 1 95%;
-            background-color: $light-gray-color;
-            border: rem( 1px ) solid $border-color;
-            padding: rem( 10px ) rem( 40px ) rem( 10px ) rem( 10px );
-            margin-top: rem( 5px );
-            cursor: pointer;
-            border-radius: rem( math.div($border-radius, 3) );
-            
-            a {
-                text-decoration: none;
-                color: unset;
-            }
-            
-        }
-        
-        .accordion-title:after {
-            position: absolute;
-            right: rem( $gutter );
-            font-family: $droplets-icon-font;
-            content: unicode('e001');
-            color: $gray-color;
-        }
-    
-        .accordion-title:first-child {
-            margin-top: 0;
-        }
-    
-        .active {
-            border-bottom: transparent;
-            border-top-left-radius: rem( 5px );
-            border-top-right-radius: rem( 5px );
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-        
-        .active:after {
-            transform: rotate(90deg);
-        }
-    
-        .accordion-content {
-            padding: 0 rem( 10px );
-            display: none;
-            background-color: #fff;
-            border: rem( 1px ) solid $border-color;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-            border-bottom-left-radius: rem( 5px );
-            border-bottom-right-radius: rem( 5px );
-        }
-    
-    }
-    
-    .no-arrow {
-        
-        .accordion-title:after {
-            display: none;
-        }
-        
-    }
-    
-    /* D033.2: OLD TABS */
-
-    .droplets-tabs {
-    
-    	margin: rem( $gutter ) 0;
-    	clear: both;
-    
-    	.tabs {
-    
-            width: 100%;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            border-bottom: rem( 1px ) solid $border-color;
-            background-color: $light-gray-color;
-            padding: rem( 8px ) rem( 5px ) 0;
-            float: left;
-            clear: both;
-            border-top-left-radius: rem( 3px );
-            border-top-right-radius: rem( 3px );
-    
-            li {
-            
-                display: block;
-                float: left;
-                margin-bottom: rem( -1px );
-                margin-right: rem( 3px );
-                background-color: #fff;
-                border-top-left-radius: rem( 3px );
-                border-top-right-radius: rem( 3px );
-                
-                a, a:visited {
-                    display: block;
-                    padding: rem( 5px ) rem( 10px );
-                    text-decoration: none;
-                    color: $gray-color;
-                }
-                
-                a:hover {
-                    color: #000;
-                }
-            
-            }
-            
-            li:hover {
-            	
-                box-shadow: 0 rem( -3px ) rem( 2px ) 0 $gray-color;
-                
-                a {
-                    color: #000;
-                }
-            	
-            }
-            
-            .active {
-            	
-                border-top: rem( 1px ) solid #929292;
-                border-right: rem( 1px ) solid #929292;
-                border-left: rem( 1px ) solid #929292;
-                border-bottom: transparent;
-                box-shadow: 0 rem( -3px ) rem( 2px ) 0 $gray-color;
-                
-                a {
-                    color: #000;
-                }
-            	
-            }
-            
-            .info {
-            	
-                background-color: $info-color;
-                
-                a, a:hover {
-                    color: #fff;
-                }
-            	
-            }
-        	
-            .danger {
-                @extend .info;
-                background-color: $danger-color;
-            }
-            
-            .success {
-                @extend .info;
-                background-color: $success-color;
-            }
-            
-            .warning {
-                @extend .info;
-                background-color: $warning-color;
-            }
-    
-    	}
-    
-    	.tab-contents {
-    
-            border-bottom: rem( 1px ) solid $border-color;
-            clear: both;
-    
-            .tab-section {
-                display: none;
-                padding: rem( 6px ) rem( 10px ) 0;
-                background-color: #fff;
-            }
-    
-            .active {
-                display: block;
-                animation: fadeIn 1s;
-            }
-    
-    	}
-    
-    }
 
 }
