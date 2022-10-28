@@ -116,6 +116,14 @@
       "oAP" : "\/build\/sf-droplets\/index.html",
       "oF" : 1
     },
+    "\/sf-droplets\/module.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/sf-droplets\/module.html",
+      "oF" : 1
+    },
     "\/sf-droplets\/script\/prism.js" : {
       "bF" : 0,
       "ft" : 64,
