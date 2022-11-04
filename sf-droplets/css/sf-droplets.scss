@@ -475,10 +475,19 @@ D00X: UWS DROPLETS WRAPPER
 
             .icon {
                 font-size: 150%;
+                line-height: 1;
             }
 
             .content {
+
                 flex: 1 0 90%;
+
+                p {
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+
             }
 
         }
