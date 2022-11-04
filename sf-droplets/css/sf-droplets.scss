@@ -2,7 +2,7 @@
  * SKILLS FORWARD DROPLETS
  * @version: 1.0.0
  * @author: Ethan Lin
- * @updated on: 11-02-2022
+ * @updated on: 11-04-2022
  * @url: https://github.com/oel-mediateam/skills-forward-droplets
  * @license: The MIT License (MIT)
  * @copyright: (c) 2022 Learning Technology & Media, University of Wisconsin Extended Campus
@@ -142,14 +142,17 @@ D00X: UWS DROPLETS WRAPPER
         padding: rem( 16px );
 
         h2 {
+
             position: relative;
             width: 50%;
             margin: 0;
             color: #fff;
-            font-size: rem( 43px );
+            font-size: rem( 42px );
+            line-height: 1.15;
             text-transform: uppercase;
             text-shadow: 2px 2px 1px $dark-blue-color;
             z-index: 1;
+
         }
 
         img {
